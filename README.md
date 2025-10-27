@@ -85,3 +85,11 @@ The simulation produces a 2x2 grid of visualizations:
 ```bash
 git clone https://github.com/zacky111/Helpline-Queueing-Theory.git
 cd Helpline-Queueing-Theory
+```
+
+2. Create venv and install required libraries:
+``` bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
