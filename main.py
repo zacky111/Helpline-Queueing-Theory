@@ -18,8 +18,21 @@ max_service = 20
 #====================================================================================================
 # Simulation
 
-df_calls = generate_input(hours=hours)
+df_calls = generate_input(hours=hours,
+                          calls_per_hour_day=calls_per_hour_day,
+                          calls_per_hour_night=calls_per_hour_night,
+                          min_service=min_service,
+                          max_service=max_service)
 stats = simulate_queues(df_calls, num_queues, queue_capacity)
+
+#====================================================================================================
+# Terminal output report
+
+print("==================== Simulation report: =========================")
+print(f"Total calls: {stats['total_calls']}")
+print(f"Accepted calls: {stats['accepted_calls']}")
+print(f"Rejected calls: {stats['rejected_calls']}")
+print("=================================================================")
 
 #====================================================================================================
 ## Prepare data for plots

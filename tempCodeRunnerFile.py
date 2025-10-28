@@ -1,2 +1,1 @@
-
-    plt.xlabel("Czas (godziny)")
+rejected_calls
